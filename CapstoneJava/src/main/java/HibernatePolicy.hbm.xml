@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.policies.data.CompanyPolicy" table = "CompanyPolicy">       
+      
+      <id name = "policyNo" column = "policyNo" type = "int">
+         <generator class="assigned"/>
+      </id>
+      
+      <property name = "policyName" column = "policyName" type = "string"/>      
+      <property name = "policyDesc" column = "policyDesc" type = "string"/>     
+      <property name = "effectiveDate" column = "effectiveDate" type = "date"/>   
+      <property name = "policyTag1" column = "policyTag1" type = "string"/>
+      <property name = "policyTag2" column = "policyTag2" type = "string"/>
+      <property name = "policyUrl" column = "policyUrl" type = "string"/>
+      <property name = "policyDoc" column = "policyDoc" type = "string"/>
+      
+   </class>
+</hibernate-mapping>

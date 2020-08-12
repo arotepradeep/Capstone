@@ -1,0 +1,33 @@
+
+<div class="sidenav">
+    <div class="login-main-text">
+        <h2>Organization Policies<br> Login Page</h2><br>
+        <p>Login here to access policies...</p>
+    </div>
+</div>
+<div class="main">
+    <div class="col-md-6 col-sm-12">
+        <div class="login-form">
+            <form (ngSubmit)="checkLogin()">
+                <div class="form-group">
+                    <label>User Name</label>
+                    <input type="text" name="userID" class="form-control" placeholder="User Name" [(ngModel)]="userID">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="passWord" class="form-control" placeholder="Password" [(ngModel)]="passWord">
+                </div>   
+                <div class="row">.</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12">
+                        <input type="submit" class="btn btn-lg btn-dark btn-block" value="Sign In">
+					</div>
+                </div>  
+                <div class="form-group">
+                    <p id="successMsg" style="padding-top: 40px; color: rgba(13, 177, 81, 0.658); font-size:125%;"></p>
+                    <p id="errorMsg" style="padding-top: 40px; color: rgba(238, 90, 32, 0.788); font-size:125%;"></p>
+                </div>                             
+            </form>
+        </div>
+    </div>
+</div>

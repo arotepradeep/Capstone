@@ -1,0 +1,27 @@
+
+<div class="sidenav">
+    <div class="login-main-text">
+        <h2>Organization policies<br>View and download</h2><br>
+        <p>You can view and download policy on this page...</p>
+    </div>
+</div>
+<div class="main">  
+    <div class="col-md-12 col-sm-12"> 
+        <form>
+            <div class="policyArea">
+                <br><label for="txtpNumber">&nbsp;<b>Policy Number :</b></label><input type="text" size="18" name="txtpNumber" disabled [(ngModel)]="pl.policyNo"> &nbsp;&nbsp;&nbsp;&nbsp;                 
+                <label for="dtEffFrm">&nbsp;<b>Effective From :</b></label><input type="date" name="dtEffFrm" disabled [(ngModel)]="pl.effectiveDate"><br>
+                <br><label for="txtpTag1">&nbsp;<b>Tag 1 :</b></label><input type="text" size="28" name="txtpTag1" disabled [(ngModel)]="pl.policyTag1"> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="txtpTag2">&nbsp;<b>Tag 2 :</b></label><input type="text" size="29" name="txtpTag2" disabled [(ngModel)]="pl.policyTag2"><br>
+                <br><label for="txtpTitle">&nbsp;<b>Title :</b>&nbsp;</label><input type="text" size="74" name="txtpTitle" disabled [(ngModel)]="pl.policyName"><br>
+                <br><label for="txtpDesc">&nbsp;<b>Description :</b></label><input type="text" size="67" name="txtpDesc" disabled [(ngModel)]="pl.policyDesc"><br>      
+                <br><textarea name="txtPolicy" rows="8" cols="84" name="txtPolicy" disabled [(ngModel)]="pl.policyDoc"></textarea><br>
+            </div>
+            <div class="policyArea">
+                <div class="col-sm-12">
+                    <a [href]="fileUrl" download="{{pl.policyName}}.txt" class="btn btn-lg btn-dark btn-block">Download Policy</a>
+                </div> 
+            </div>
+        </form>
+    </div>	
+</div>

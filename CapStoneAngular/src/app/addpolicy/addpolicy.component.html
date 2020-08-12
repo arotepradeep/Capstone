@@ -1,0 +1,25 @@
+
+<div class="sidenav">
+    <div class="login-main-text">
+        <h2>Organization policies<br>Add Policy</h2><br>
+        <p>Add policies one by one...</p>
+    </div>
+</div>
+<div class="main">  
+    <div class="col-md-12 col-sm-12"> 
+        <form (ngSubmit)="addPolicy()">
+            <div class="policyArea">
+                <br><input type="text" size="36" required="required" placeholder="Policy No." name="txtpNumber" [(ngModel)]="pNumber"> &nbsp;&nbsp;&nbsp;&nbsp;                 
+                <label for="dtEffFrm">&nbsp;<b>Effective From :</b></label><input type="date" required="required" name="dtEffFrm" [(ngModel)]="pEffDate"><br>
+                <br><input type="text" size="36" placeholder="Tag 1" name="txtpTag1" [(ngModel)]="pTag1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" size="36" placeholder="Tag 2" name="txtpTag2" [(ngModel)]="pTag2"><br>
+                <br><input type="text" size="82" required="required" placeholder="Policy Title" name="txtpTitle" [(ngModel)]="pTitle"><br>
+                <br><input type="text" size="82" required="required" placeholder="Policy Description" name="txtpDesc" [(ngModel)]="pDesc"><br>      
+                <br><textarea name="txtPolicy" rows="8" cols="84" required="required" placeholder="Policy" name="txtPolicy" [(ngModel)]="policy"></textarea><br>
+                <br><br>
+                <button type="submit" class="btn btn-lg btn-dark btn-block" > Add Policy </button>     
+                <p id="msg" style="padding-top: 40px; color: rgba(2, 14, 7, 0.753); font-size:125%;"></p>
+            </div>
+        </form>
+    </div>	
+</div>

@@ -1,0 +1,31 @@
+
+<div class="sidenav">
+    <div class="login-main-text">
+        <h2>Organization policies<br>Edit Policy</h2><br>
+        <p>Edit policies one by one...</p>
+    </div>
+</div>
+<div class="main">  
+    <div class="col-md-12 col-sm-12"> 
+        <form>
+            <div class="policyArea">
+                <br><input type="text" size="35" placeholder="Policy No." name="txtpNumber" disabled [(ngModel)]="pl.policyNo"> &nbsp;&nbsp;&nbsp;&nbsp;                 
+                <label for="dtEffFrm">&nbsp;<b>Effective From :</b></label><input type="date" name="dtEffFrm" disabled [(ngModel)]="pl.effectiveDate"><br>
+                <br><input type="text" size="35" placeholder="Tag 1" name="txtpTag1" [(ngModel)]="pl.policyTag1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" size="35" placeholder="Tag 2" name="txtpTag2" [(ngModel)]="pl.policyTag2"><br>
+                <br><input type="text" size="80" placeholder="Policy Title" name="txtpTitle" disabled [(ngModel)]="pl.policyName"><br>
+                <br><input type="text" size="80" placeholder="Policy Description" name="txtpDesc" [(ngModel)]="pl.policyDesc"><br>      
+                <br><textarea name="txtPolicy" rows="8" cols="82" placeholder="Policy" name="txtPolicy" [(ngModel)]="pl.policyDoc"></textarea><br>
+                <br><br>
+				<div class="row">
+					<div class="col-sm-12">
+                        <button class="btn btn-lg btn-dark btn-block" (click)="savePolicy()">Save Changes</button>
+					</div> 
+                    <div class="col-sm-12">
+                        <p id="msg" style="padding-top: 40px; color: rgba(2, 14, 7, 0.753); font-size:125%;"></p>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>	
+</div>

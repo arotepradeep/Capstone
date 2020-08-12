@@ -1,0 +1,54 @@
+
+<div style="background-color: rgb(189, 190, 189);">    
+    <p class="b"></p>
+    <div class="row"> 
+        <div class="col-xs-3">
+            &nbsp;&nbsp;&nbsp;&nbsp; <font size="4" Face="Cambria">Select criteria to filter</font> &nbsp;&nbsp;
+        </div>               
+        <div class="col-xs-3">                 
+            <select name="criteria" class="btn" [(ngModel)]="criteria">
+                <option value="policyNumber">Policy Number</option>
+                <option value="policyName">Polict Title</option>
+                <option value="effDate">Effective from</option>
+                <option value="tag">Tag</option>
+            </select>
+        </div>               
+        <div class="col-xs-1">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div class="col-xs-3">
+            <input class="form-control" type="text" placeholder="Enter selection" [(ngModel)]="criteriaTxt">
+        </div>          
+        <div class="col-xs-1">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div class="col-xs-1">
+            <button class="btn" (click)="filterPolicies()">Apply filter</button>
+        </div> 
+        <div class="col-xs-1">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div class="col-xs-1">
+            <button class="btn" (click)="removeFilter()">Clear Selection</button>
+        </div> 
+    </div>    
+    <p class="b"></p>
+    <table id="customers" style="background-color: rgb(180, 184, 180);">
+        <tr>
+            <th style="width: 100px">Policy No.</th>
+            <th>Policy Name</th>
+            <th>Policy Description</th>
+            <th>Effective From</th>
+            <th>Tag 1</th>
+            <th>Tag 2</th>
+            <th style="width: 270px">Actions</th>
+        </tr>
+        <tr *ngFor="let i of allPolicies">
+            <td>{{i.policyNo}}</td>
+            <td>{{i.policyName}}</td>
+            <td>{{i.policyDesc}}</td>
+            <td>{{i.effectiveDate | date : 'dd-MMM-yyyy'}}</td>
+            <td>{{i.policyTag1}}</td>
+            <td>{{i.policyTag2}}</td>            
+            <td> &nbsp;&nbsp;
+                <button class="btn btn-success" (click)="viewPolicy(i)">View/DL</button> &nbsp;&nbsp;
+                <button *ngIf="!isEmp;" class="btn btn-info" (click)="editPolicy(i)">Edit</button> &nbsp;&nbsp;
+                <button *ngIf="isMgt;" class="btn btn-warning" (click)="deletePolicy(i)">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div> 

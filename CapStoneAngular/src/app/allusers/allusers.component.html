@@ -1,0 +1,18 @@
+
+<div style="background-color: rgb(189, 190, 189);">
+    <p class="a">All Users...</p>
+    <table id="customers" style="background-color: rgb(180, 184, 180);">
+        <tr>
+            <th>User ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Role</th>
+        </tr>
+        <tr *ngFor="let i of allUsers">
+            <td>{{i.userID}}</td>
+            <td>{{i.fName}}</td>
+            <td>{{i.lName}}</td>
+            <td>{{i.role}}</td>
+        </tr>
+    </table>
+</div> 
